@@ -52,7 +52,7 @@ app.get('/old-page(.html)?', (req, res) => {
 });
 
 // Route handlers for api
-app.use('/employee', require('./routes/api/employee'))
+app.use('/employees', require('./routes/api/employee'))
 
 app.get('/hello(.html)?', (req, res, next) => {
     console.log('attempted to load hello.html');
