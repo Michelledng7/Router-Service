@@ -20,11 +20,11 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 
 //serve static files
-app.use(express.static(path.join(__dirname, '/public')));
-//app.use('/', express.) how to refer routeremployee in serverjs
+app.use('/', express.static(path.join(__dirname, '/public')));
 
 //routes
 app.use('/', require('./routes/root'))
+app.use('/register', require('./routes/register'))
 // Route handlers for api
 app.use('/employees', require('./routes/api/employee'))
 
