@@ -26,15 +26,24 @@ const login = async (req, res) => {
             process.env.ACCESS_TOKEN_SECRET,
             { expiresIn: '30s' }
         );
-        const refressToken = jwt.sign(
+        const refreshToken = jwt.sign(
             { username: matchUser.username },
-            process.env.REFRESS_TOKEN_SECRET,
+            process.env.REFRESH_TOKEN_SECRET,
             { expiresIn: '1d'}            
         )
-        res.status(200).json({"message": `${user} successfully login`})
-        res.status(200).json({accessToken})
+        //store refresh token in httpOnly cookie
+         // Saving refreshToken with current user
+        const otherUsers = usersDB.users.filter(person => person.username !== matchUser.username);
+        const currentUser = { ...matchUser, refreshToken };
+        usersDB.setUsers([...otherUsers, currentUser]);
+        await fsPromises.writeFile(
+            path.join(__dirname, '..', 'data', 'users.json'),
+            JSON.stringify(usersDB.users)
+        );
+        res.cookie('jwt', refreshToken, { httpOnly: true, sameSite: 'None', secure: true, maxAge: 24 * 60 * 60 * 1000 });
+        res.json({ accessToken });
     } else {
-        res.status(401).json({"message": "Unauthorized with password"})
+        res.sendStatus(401);
     }
 }
 
