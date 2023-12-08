@@ -32,9 +32,12 @@ app.use('/', require('./routes/root'))
 app.use('/register', require('./routes/register'))
 app.use('/login', require('./routes/auth'))
 app.use('/refresh', require('./routes/refreshToken'))
-// Route handlers for api, protected by JWT
+app.use('/logout', require('./routes/logout'))
+
+// Protected API, Route handlers protected by JWT
 app.use(verifyJWT)
 app.use('/employees', require('./routes/api/employee'))
+
 
 app.all('*', (req, res) => {
     res.status(404);

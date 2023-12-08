@@ -11,7 +11,7 @@ const path = require('path')
 const fsPromises = require('fs').promises //before mongodb use files to store data
 
 
-const login = async (req, res) => {
+const handleLogin = async (req, res) => {
     const { user, pwd } = req.body
     if (!user || !pwd) return res.status(400).json({ "message": "User name or password is required" })
 
@@ -47,4 +47,4 @@ const login = async (req, res) => {
     }
 }
 
-module.exports = {login}
+module.exports = {handleLogin}
