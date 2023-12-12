@@ -3,3 +3,5 @@
 20231201	14:10:08	96e85abe-1881-4491-aea3-9072afc15010	SyntaxError: Unexpected token u in JSON at position 4
 20231208	19:31:00	4cf983a9-a1ea-4e0c-999b-98fd8ec0ef53	SyntaxError: Unexpected token 
  in JSON at position 17
+20231212	19:04:36	1d51212f-8911-43a3-a832-88ceaf4370f8	TypeError: authHeader?.startswith is not a function
+20231212	19:04:45	7f01f30a-3f11-40d7-80b7-b79e1c719365	TypeError: authHeader?.startswith is not a function
