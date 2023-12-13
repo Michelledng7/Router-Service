@@ -12,7 +12,7 @@ const createEmployee = (req, res) => {
     res.json({
         'firstname': req.body.firstname,
         'lastname': req.body.lastname,
-    })
+    })//next is to save in db
 }
 
 const updateEmployee = (req, res) => {

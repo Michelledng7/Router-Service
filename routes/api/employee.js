@@ -5,13 +5,13 @@ const data = { }
 data.employee = require('../../data/data.json')
 const employeesController = require('../../controllers/employeesController')
 const verifyRoles = require('../../middleware/verifyRoles')
-const { Admin } = require('../../config/roles')
+const { Admin, User, Editor } = require('../../config/roles')
 
 router.route('/')
     .get(employeesController.getAllEmployees)
-    .post(verifyRoles(Admin), employeesController.createEmployee)
-    .put(employeesController.updateEmployee)
-    .delete(employeesController.deleteEmployee)        
+    .post(verifyRoles(Admin, Editor), employeesController.createEmployee)
+    .put(verifyRoles(Admin, Editor), employeesController.updateEmployee)
+    .delete(verifyRoles(Admin), employeesController.deleteEmployee)        
 
 
 router.route('/:id')

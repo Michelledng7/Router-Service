@@ -5,3 +5,4 @@
  in JSON at position 17
 20231212	19:04:36	1d51212f-8911-43a3-a832-88ceaf4370f8	TypeError: authHeader?.startswith is not a function
 20231212	19:04:45	7f01f30a-3f11-40d7-80b7-b79e1c719365	TypeError: authHeader?.startswith is not a function
+20231213	16:03:20	33638e33-4257-404f-a7d4-cbbea63805df	ReferenceError: ture is not defined
