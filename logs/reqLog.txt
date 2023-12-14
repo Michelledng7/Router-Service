@@ -755,3 +755,12 @@
 20231213	16:08:36	638f130d-ebc6-4d38-8508-7d2c889c44bb	POST	undefined	/employees
 20231213	16:08:44	ea051f4b-ae34-4080-b339-d00b5ad1fb90	GET	undefined	/employees
 20231213	16:08:51	b1215544-7182-408d-8593-fe10a7d39515	GET	undefined	/employees
+20231214	19:23:40	8aecc898-6bf7-4504-be3e-be48b6ddcbac	POST	undefined	/login
+20231214	19:24:00	889246d3-1443-404a-86ab-c0ad79e972f5	GET	undefined	/employees
+20231214	19:24:05	fc3bcb15-fbe2-4de1-91e3-1515c39d3f5a	POST	undefined	/employees
+20231214	19:24:11	9bf9ea60-f3ef-42cb-a836-c96a99e14c61	DELETE	undefined	/employees
+20231214	19:24:18	7740fa50-5220-41e8-ad99-f66656b0a5d7	POST	undefined	/login
+20231214	19:24:35	d465b32b-307b-4586-9b63-d84a8bebb61b	DELETE	undefined	/employees
+20231214	19:24:50	5570f6e8-79ca-4bbd-bb42-bef8d9f41735	PUT	undefined	/employees
+20231214	19:24:55	48345b05-4207-431f-9375-84e22f7918ce	POST	undefined	/login
+20231214	19:25:11	6f785dfc-f718-47b8-a0dd-4a07cd459276	PUT	undefined	/employees

@@ -1,6 +1,6 @@
 //seperate the method logic from the routes
 const data = {}
-data.employee = require('../data/data.json')
+data.employee = require('../model/data.json')
 
 const getAllEmployees = (req, res) => {
     res.json(
